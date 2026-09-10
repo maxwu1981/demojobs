@@ -48,3 +48,13 @@ aside.side .sim:first-of-type{border-top:0}
 aside.side .sim span{display:block;color:var(--muted);font-size:12.5px}
 footer.site{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px}
 footer.site .wrap{padding-top:16px;padding-bottom:18px}
+/* 手機寬度：原本只有桌機版，導覽列會擠成直排、搜尋列與職缺頁側欄被壓扁 */
+@media (max-width:600px){
+  .wrap{padding-left:16px;padding-right:16px}
+  header.site .wrap{height:auto;flex-wrap:wrap;gap:6px 12px;padding-top:12px;padding-bottom:12px}
+  nav.top{display:none}
+  .search .wrap{flex-wrap:wrap}
+  .search .box:first-child{flex:1 1 100%}
+  .search .box + .box{flex:1 1 auto !important}
+  .grid{grid-template-columns:1fr}
+}
